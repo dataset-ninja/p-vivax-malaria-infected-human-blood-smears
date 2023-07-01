@@ -116,7 +116,7 @@ def convert_and_upload_supervisely_project(
     for split, items in image_name_to_data.items():
         pbar = tqdm(desc=f"Processing '{split}' split", total=len(items))
         ds = api.dataset.create(project.id, split)
-        for batch in sly.batched(items, batch_size=batch_size):
+        for batch in sly.batched(list(items.items()), batch_size=batch_size):
             image_names = list(batch.keys())
             anns = list(batch.values())
             image_paths = [os.path.join(images_path, image_name) for image_name in image_names]
