@@ -35,7 +35,7 @@ VERTICAL_GRID_IS_DETECTION_TASK: bool = IS_DETECTION_TASK
 ###############################################################
 # * Set up visualization params for SideAnnotationsGrid class #
 SIDE_ANNOTATIONS_GRID_ROWS: int = None
-SIDE_ANNOTATIONS_GRID_COLS: int = None
+SIDE_ANNOTATIONS_GRID_COLS: int = 3
 SIDE_ANNOTATIONS_GRID_IS_DETECTION_TASK: bool = IS_DETECTION_TASK
 ###############################################################
 
