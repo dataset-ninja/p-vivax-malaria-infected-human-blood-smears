@@ -1,22 +1,35 @@
 from typing import Dict, List, Optional, Union
 
-from dataset_tools.templates import AnnotationType, CVTask, Industry, License
+from dataset_tools.templates import (
+    AnnotationType,
+    Category,
+    CVTask,
+    Domain,
+    Industry,
+    License,
+    Research,
+)
 
 ##################################
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "Malaria Bounding Boxes"
-PROJECT_NAME_FULL: str = "Malaria Bounding Boxes"
+PROJECT_NAME_FULL: str = "P. vivax (malaria) infected human blood smears"
 
 ##################################
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.CC_BY_NC_SA_3_0_IGO()
-INDUSTRIES: List[Industry] = [Industry.Medical()]
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Research.Biomedical()]
+CATEGORY: Category = Category.Biology(extra=Category.Medical())
+
 CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
 
-RELEASE_YEAR: int = 2012
+RELEASE_DATE: Optional[str] = "2019-03-11"  # e.g. "YYYY-MM-DD"
+if RELEASE_DATE is None:
+    RELEASE_YEAR: int = None
+
 HOMEPAGE_URL: str = "https://bbbc.broadinstitute.org/BBBC041/"
 # e.g. "https://some.com/dataset/homepage"
 
@@ -29,16 +42,38 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/malaria-bounding-boxes"
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "https://data.broadinstitute.org/bbbc/BBBC041/malaria.zip"
+
+DOWNLOAD_ORIGINAL_URL: Optional[
+    Union[str, dict]
+] = "https://data.broadinstitute.org/bbbc/BBBC041/malaria.zip"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
-PAPER: Optional[str] = None
-CITATION_URL: Optional[str] = None
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
+PAPER: Optional[str] = "https://arxiv.org/ftp/arxiv/papers/1804/1804.09548.pdf"
+CITATION_URL: Optional[str] = "https://arxiv.org/abs/1804.09548"
+AUTHORS: Optional[List[str]] = [
+    "Jane Hung",
+    "Deepali Ravel",
+    "Stefanie C.P. Lopes",
+    "Gabriel Rangel",
+    "Odailton Amaral Nery",
+    "Benoit Malleret",
+    "Francois Nosten",
+    "Marcus V. G. Lacerda",
+    "Marcelo U. Ferreira",
+    "Laurent Rénia",
+    "Manoj T. Duraisingh",
+    "Fabio T. M. Costa",
+    "Matthias Marti",
+    "Anne E. Carpenter",
+]
+
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "Broad Institute, UK"
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.broadinstitute.org/"
+
+SLYTAGSPLIT: Optional[Dict[str, List[str]]] = None
 TAGS: List[str] = None
 
 ##################################
@@ -53,10 +88,15 @@ def check_names():
 
 
 def get_settings():
+    if RELEASE_DATE is not None:
+        global RELEASE_YEAR
+        RELEASE_YEAR = int(RELEASE_DATE.split("-")[0])
+
     settings = {
         "project_name": PROJECT_NAME,
         "license": LICENSE,
-        "industries": INDUSTRIES,
+        "applications": APPLICATIONS,
+        "category": CATEGORY,
         "cv_tasks": CV_TASKS,
         "annotation_types": ANNOTATION_TYPES,
         "release_year": RELEASE_YEAR,
@@ -68,13 +108,16 @@ def get_settings():
     if any([field is None for field in settings.values()]):
         raise ValueError("Please fill all fields in settings.py after uploading to instance.")
 
+    settings["release_date"] = RELEASE_DATE
     settings["project_name_full"] = PROJECT_NAME_FULL or PROJECT_NAME
     settings["download_original_url"] = DOWNLOAD_ORIGINAL_URL
     settings["class2color"] = CLASS2COLOR
     settings["paper"] = PAPER
     settings["citation_url"] = CITATION_URL
+    settings["authors"] = AUTHORS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
-    settings["tags"] = TAGS if TAGS is not None else []
+    settings["slytagsplit"] = SLYTAGSPLIT
+    settings["tags"] = TAGS
 
     return settings
