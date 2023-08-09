@@ -48,7 +48,10 @@ DOWNLOAD_ORIGINAL_URL: Optional[
 ] = "https://data.broadinstitute.org/bbbc/BBBC041/malaria.zip"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
-CLASS2COLOR: Optional[Dict[str, List[str]]] = None
+CLASS2COLOR: Optional[Dict[str, List[str]]] = {
+    "red blood cell":[230, 25, 75], "trophozoite":[60, 180, 75], "difficult":[255, 225, 25], "ring":[0, 130, 200], "schizont":[245, 130, 48], "gametocyte":[145, 30, 180],  "leukocyte":[70, 240, 240]
+}
+
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 PAPER: Optional[str] = "https://arxiv.org/abs/1804.09548"
