@@ -14,7 +14,7 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "Malaria Bounding Boxes"
-PROJECT_NAME_FULL: str = "P. vivax (malaria) infected human blood smears"
+PROJECT_NAME_FULL: str = "P. Vivax (Mlaria) Infected Human Blood Smears"
 
 ##################################
 # * After uploading to instance ##
@@ -51,8 +51,8 @@ DOWNLOAD_ORIGINAL_URL: Optional[
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
-PAPER: Optional[str] = "https://arxiv.org/ftp/arxiv/papers/1804/1804.09548.pdf"
-CITATION_URL: Optional[str] = "https://arxiv.org/abs/1804.09548"
+PAPER: Optional[str] = "https://arxiv.org/abs/1804.09548"
+CITATION_URL: Optional[str] = "https://bbbc.broadinstitute.org/BBBC041/"
 AUTHORS: Optional[List[str]] = [
     "Jane Hung",
     "Deepali Ravel",
