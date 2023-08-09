@@ -8,4 +8,4 @@ Each cell in the dataset is associated with a class label and a set of bounding 
 
 The data was derived from samples of P. vivax infected patients obtained from various labs in Manaus, Brazil, and Thailand. The dataset was divided into training and validation subsets, with samples from Manaus and Thailand being employed for this purpose. Blood smears stained with Giemsa reagent were used to allow malaria researchers to examine infected cells and identify their stages. The dataset's annotations were provided by an expert malaria researcher and encompassed seven labels to represent distinct cell types. The class imbalance was evident, with red blood cells constituting the majority, around 97% of the 100,000 cells in total.
 
-Note, that in the original downloaded data, only *train* and *valid* image sets were provided.
+Note, that in the original download data, only *train* and *test* image sets are available.
