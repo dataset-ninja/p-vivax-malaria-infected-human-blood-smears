@@ -1,6 +1,6 @@
 Dataset **Malaria Bounding Boxes** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/r/i/rN/6AvMzDBY8eY3u2ckaSavF5uPszoCiqnePuP1FP8AWNMKoFm25wSjm12i35hhoRyC429Ea4b3hqApWXzPTGTe0UGgaAfphdoqzqbbFmeGYl6yQ5v6cLcq9EZTrSR6.tar)
+ [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/m/0/vF/442JXuyKtrCjzyFVf8pIsOfWKKPXgrEzKounH5Ycne7SCbUQVzLigZijXMmOy3GsAKScCxFqZwG91rOZTstLmr8xO3SrB9kYKx57JatpqibyYQnNz41Ykm3BOeSt.tar)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
@@ -15,4 +15,4 @@ dtools.download(dataset='Malaria Bounding Boxes', dst_dir='~/dataset-ninja/')
 ```
 Make sure not to overlook the [python code example](https://developer.supervisely.com/getting-started/python-sdk-tutorials/iterate-over-a-local-project) available on the Supervisely Developer Portal. It will give you a clear idea of how to effortlessly work with the downloaded dataset.
 
-The data in original format can be [downloaded here](https://data.broadinstitute.org/bbbc/BBBC041/malaria.zip)
+The data in original format can be [downloaded here](https://data.broadinstitute.org/bbbc/BBBC041/malaria.zip).
