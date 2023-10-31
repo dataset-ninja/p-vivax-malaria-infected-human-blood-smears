@@ -14,7 +14,7 @@ from dataset_tools.templates import (
 # * Before uploading to instance #
 ##################################
 PROJECT_NAME: str = "Malaria Bounding Boxes"
-PROJECT_NAME_FULL: str = "P. Vivax (Mlaria) Infected Human Blood Smears"
+PROJECT_NAME_FULL: str = "P. Vivax (Malaria) Infected Human Blood Smears"
 HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
@@ -56,7 +56,11 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = {
 # If specific colors for classes are needed, fill this dict (e.g. {"class1": [255, 0, 0], "class2": [0, 255, 0]})
 
 PAPER: Optional[str] = "https://arxiv.org/abs/1804.09548"
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"https://github.com/tobsecret/Awesome_Malaria_Parasite_Imaging_Datasets"}
+
+
 CITATION_URL: Optional[str] = "https://bbbc.broadinstitute.org/BBBC041/"
+
 AUTHORS: Optional[List[str]] = [
     "Jane Hung",
     "Deepali Ravel",
@@ -73,6 +77,8 @@ AUTHORS: Optional[List[str]] = [
     "Matthias Marti",
     "Anne E. Carpenter",
 ]
+AUTHORS_CONTACTS: Optional[List[str]] = ["jyenhung@gmail.com"]
+
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = "Broad Institute, UK"
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = "https://www.broadinstitute.org/"
@@ -118,8 +124,10 @@ def get_settings():
     settings["download_original_url"] = DOWNLOAD_ORIGINAL_URL
     settings["class2color"] = CLASS2COLOR
     settings["paper"] = PAPER
+    settings["repository"] = REPOSITORY
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
