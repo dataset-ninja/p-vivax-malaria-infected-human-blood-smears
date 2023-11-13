@@ -13,7 +13,7 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "Malaria Bounding Boxes"
+PROJECT_NAME: str = "P. Vivax (Malaria) Infected Human Blood Smears"
 PROJECT_NAME_FULL: str = "P. Vivax (Malaria) Infected Human Blood Smears"
 HIDE_DATASET = False  # set False when 100% sure about repo quality
 
