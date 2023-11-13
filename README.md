@@ -1,3 +1,3 @@
 # P. Vivax (Malaria) Infected Human Blood Smears
 
-Malaria Bounding Boxes is a dataset for object detection task.
+P. Vivax (Malaria) Infected Human Blood Smears is a dataset for object detection task.
