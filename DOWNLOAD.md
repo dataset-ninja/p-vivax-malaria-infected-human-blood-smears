@@ -1,6 +1,6 @@
 Dataset **P. Vivax (Malaria) Infected Human Blood Smears** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/supervisely-supervisely-assets-public/teams_storage/0/Y/OJ/JK9SYbPxplXPLTF0RxZRDWLhLbLotUioNmGZm2xbyVflfYOWSf3AYAXQYGp9hd0ItiZiGVlsF9ZCk2m2cNevMtTFBLSSzNcApSmIMWlRefDhIPVtg1ThTMEb0RS3.tar)
+ [Download](https://www.dropbox.com/scl/fi/um5gq2ovedk8vrfw2v41n/p.-vivax-malaria-infected-human-blood-smears-DatasetNinja.tar?rlkey=7g2ne1agn22rmjwd1rcmc9k0e&dl=1)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
