@@ -1,6 +1,6 @@
 Dataset **P. Vivax (Malaria) Infected Human Blood Smears** can be downloaded in [Supervisely format](https://developer.supervisely.com/api-references/supervisely-annotation-json-format):
 
- [Download](https://assets.supervisely.com/remote/eyJsaW5rIjogImZzOi8vYXNzZXRzLzEyNDFfUC4gVml2YXggKE1hbGFyaWEpIEluZmVjdGVkIEh1bWFuIEJsb29kIFNtZWFycy9wLi12aXZheC0obWFsYXJpYSktaW5mZWN0ZWQtaHVtYW4tYmxvb2Qtc21lYXJzLURhdGFzZXROaW5qYS50YXIiLCAic2lnIjogImV0VTVtRE93LzhKRTFFZzMvanM3eDV6Tm5LRG9TRTZKWU1lRVVQMzNIWjQ9In0=)
+ [Download](https://assets.supervisely.com/remote/eyJsaW5rIjogInMzOi8vc3VwZXJ2aXNlbHktZGF0YXNldHMvMTI0MV9QLiBWaXZheCAoTWFsYXJpYSkgSW5mZWN0ZWQgSHVtYW4gQmxvb2QgU21lYXJzL3AuLXZpdmF4LShtYWxhcmlhKS1pbmZlY3RlZC1odW1hbi1ibG9vZC1zbWVhcnMtRGF0YXNldE5pbmphLnRhciIsICJzaWciOiAiZUxUTkE3cVNtczhwaktjbWRXMFFhZmZ5cDZ3VitDZzM5eWZlNEhBQnhWVT0ifQ==?response-content-disposition=attachment%3B%20filename%3D%22p.-vivax-%28malaria%29-infected-human-blood-smears-DatasetNinja.tar%22)
 
 As an alternative, it can be downloaded with *dataset-tools* package:
 ``` bash
